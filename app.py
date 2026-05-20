@@ -2,24 +2,23 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# ---------------------------------------------------
+
 # PAGE CONFIG
-# ---------------------------------------------------
 
 st.set_page_config(
     page_title="Responsible AI Monitoring Dashboard",
     layout="wide"
 )
 
-# ---------------------------------------------------
+
 # TITLE
-# ---------------------------------------------------
+
 
 st.title("Responsible AI Monitoring Dashboard")
 
-# ---------------------------------------------------
+
 # SIDEBAR
-# ---------------------------------------------------
+
 
 st.sidebar.title("Navigation")
 
@@ -35,9 +34,9 @@ page = st.sidebar.radio(
     ]
 )
 
-# ---------------------------------------------------
+
 # OVERVIEW PAGE
-# ---------------------------------------------------
+
 
 if page == "Overview":
 
@@ -60,9 +59,9 @@ if page == "Overview":
     - Governance Risk
     """)
 
-# ---------------------------------------------------
+
 # ACCURACY MONITORING PAGE
-# ---------------------------------------------------
+
 
 elif page == "Accuracy Monitoring":
 
@@ -110,9 +109,9 @@ elif page == "Accuracy Monitoring":
         st.error("Metrics file not found.")
         st.info("Run train_model.py first.")
 
-# ---------------------------------------------------
+
 # BIAS DETECTION PAGE
-# ---------------------------------------------------
+
 
 elif page == "Bias Detection":
 
@@ -138,9 +137,9 @@ elif page == "Bias Detection":
     - Non-discriminatory predictions
     """)
 
-# ---------------------------------------------------
+
 # DRIFT DETECTION PAGE
-# ---------------------------------------------------
+
 
 elif page == "Drift Detection":
 
@@ -167,9 +166,8 @@ elif page == "Drift Detection":
     - Detection of changing data patterns
     """)
 
-# ---------------------------------------------------
+
 # EXPLAINABILITY PAGE
-# ---------------------------------------------------
 
 elif page == "Explainability":
 
@@ -203,9 +201,9 @@ elif page == "Explainability":
     - AI transparency and accountability
     """)
 
-# ---------------------------------------------------
+
 # GOVERNANCE RISK PAGE
-# ---------------------------------------------------
+
 
 elif page == "Governance Risk":
 
